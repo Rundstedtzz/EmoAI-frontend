@@ -38,13 +38,13 @@ nav a {
   font-size: 1.8rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #4a4a4a; /* Subtle color for normal state */
+  color: #05b186; /* Subtle color for normal state */
   transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 nav a:hover,
 nav a:focus {
-  color: #000; /* Darker color for hover state */
+  color: #3e4dbd; /* Darker color for hover state */
   text-decoration: none; /* Maintain no underline on hover */
 }
 
