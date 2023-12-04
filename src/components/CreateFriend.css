@@ -95,7 +95,7 @@
   }
   
   .friend-name-input {
-    width: 80%; /* Take the full width of the parent container */
+    width: 500px; /* Take the full width of the parent container */
     padding: 10px;
     font-size: 25px;
     border-radius: 5px;
@@ -143,4 +143,38 @@
   
   .start-chat-button:hover {
     opacity: 0.8;
+  }
+
+  .custom-prompt-input {
+    width: 500px; /* It will take the full width of its parent container */
+    /* ... other styles ... */
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .generate-avatar-button {
+    width: 500px;
+    padding: 20px 100px;
+    background-color: #4caf50; /* Example primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease;
+  }
+  
+  .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
