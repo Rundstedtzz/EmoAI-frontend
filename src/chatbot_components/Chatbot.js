@@ -5,6 +5,7 @@ import Messages from '../chatbot_components/Messages';
 import Input from '../chatbot_components/Input';
 import '../chatbot_components/styles.css';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function Chatbot() {
@@ -14,6 +15,8 @@ function Chatbot() {
   const { selectedType, selectedTrait, virtualFriendName, customPrompt, avatarUrl} = location.state || {};
   const [selectedModel, setSelectedModel] = useState('gpt-4');
   const [showModelSelection, setShowModelSelection] = useState(true);
+  const navigate = useNavigate();
+  const username = localStorage.getItem('username');
 
 
   // URLs for avatars from the public/avatars folder or a suitable path
@@ -64,6 +67,11 @@ function Chatbot() {
     setIsLoading(false);
   };
 
+  const backtoDash = async () => {
+    // Navigate to the chatbot page with state
+    navigate(`/dashboard/${username}/`);
+  };
+
   // return (
   //   <div className="chatbot-container">
   //     <Header friendName={virtualFriendName} />
@@ -89,7 +97,14 @@ function Chatbot() {
           <button onClick={handleConfirm}>Confirm</button>
         </div>
       )}
-  
+      <div className="back-to-dash">
+            <button 
+              className={"dash-button"}
+              onClick={() => backtoDash()}
+            >
+              Go Back to Dashboard
+            </button>
+      </div>
       {/* Rest of your component */}
       <Messages 
         messages={messages}

@@ -124,6 +124,11 @@ function CreateFriend() {
         } 
       });
     };
+
+    const backtoDash = async () => {
+      // Navigate to the chatbot page with state
+      navigate(`/dashboard/${username}/`);
+    };
     
   
     // Conditional rendering for avatar path
@@ -163,6 +168,14 @@ function CreateFriend() {
               onClick={() => handleTraitClick('Turbulent')}
             >
               Turbulent
+            </button>
+          </div>
+          <div className="back-to-dash">
+            <button 
+              className={"dash-button"}
+              onClick={() => backtoDash()}
+            >
+              Go Back to Dashboard
             </button>
           </div>
         </div>

@@ -46,6 +46,18 @@ function Dashboard() {
     navigate('/create-friend'); // Navigate to the create-friend route
   };
 
+  const handleAvatarClick = (friend) => {
+    navigate('/chatbot', { 
+      state: { 
+        selectedType: friend.mbti, 
+        selectedTrait: friend.mbti_variant, 
+        virtualFriendName: friend.name, 
+        customPrompt: friend.custom_prompt, 
+        avatarUrl: friend.avatar
+      } 
+    });
+  };
+  
   // If user data has not been loaded, you can render a loading state or return null
   if (!user) {
     return <div>Loading...</div>; // Or any other loading state indicator
@@ -68,7 +80,7 @@ function Dashboard() {
         <section className="virtual-friends-section">
             <h3>Your Virtual Friends</h3>
             <div className="friends-list">
-                {friends.map((friend, index) => (
+                {/* {friends.map((friend, index) => (
                     <div key={index} className="friend"> 
                         {friend.avatar && (
                           <img src={`${friend.avatar}`} alt={`Avatar of ${friend.name}`} className="friend-avatar" />
@@ -77,6 +89,21 @@ function Dashboard() {
                         <h4>MBTI: {friend.mbti}-{friend.mbti_variant.charAt(0)}</h4>
                         <div className="custom_prompt">Custom Prompt: {friend.custom_prompt}</div>
                     </div>
+                ))} */}
+                {friends.map((friend, index) => (
+                  <div key={index} className="friend"> 
+                    {friend.avatar && (
+                      <img 
+                        src={`${friend.avatar}`} 
+                        alt={`Avatar of ${friend.name}`} 
+                        className="friend-avatar"
+                        onClick={() => handleAvatarClick(friend)}
+                      />
+                    )}
+                    <h4>{friend.name}</h4>
+                    <h4>MBTI: {friend.mbti}-{friend.mbti_variant.charAt(0)}</h4>
+                    <div className="custom_prompt">Custom Prompt: {friend.custom_prompt}</div>
+                  </div>
                 ))}
             </div>
         </section>
