@@ -195,7 +195,7 @@ function CreateFriend() {
                   className="custom-prompt-input"
                   value={customPrompt}
                   onChange={(e) => setCustomPrompt(e.target.value)}
-                  rows={10} // You can adjust the number of rows as needed
+                  rows={9} // You can adjust the number of rows as needed
               />
               <button className="generate-avatar-button" onClick={handleGenerateAvatar}>
                   Generate Virtual Friend Avatar with DALL-E 3

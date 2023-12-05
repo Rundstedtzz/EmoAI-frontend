@@ -25,7 +25,7 @@
   }
   
   .mbti-button {
-    margin: 5px;
+    margin: 10px;
     padding: 50px 50px; /* Adjust padding to fit content */
     border: none;
     border-radius: 5px;
@@ -68,6 +68,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-radius: 10px;
   }
   
   .trait-button:hover {
@@ -88,8 +89,8 @@
   }
   
   .avatar-display img {
-    width: 500px; /* Adjust size as needed */
-    height: 500px; /* Adjust size as needed */
+    width: 400px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
     border-radius: 50%;
     margin-bottom: 20px;
   }
@@ -130,7 +131,8 @@
   }
 
   .start-chat-button {
-    padding: 50px 200px;
+    /* width: 500px; */
+    padding: 20px 100px;
     background-color: #4caf50; /* Example primary color */
     color: white;
     border: none;
@@ -177,4 +179,17 @@
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  .dash-button{
+    width: 500px;
+    padding: 20px 100px;
+    background-color: #4caf50; /* Example primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease;
   }

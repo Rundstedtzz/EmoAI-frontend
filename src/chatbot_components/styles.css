@@ -15,7 +15,7 @@
   color: #fff;
   background-color: #274f6b;
   opacity: 0.75;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .messages {
@@ -116,4 +116,71 @@
   height: 70px;
   border-radius: 50%;
   margin: 0 10px;
+}
+
+.dash-button-chatbot{
+  width: 200px;
+  height: 50px;
+  padding: 2px;
+  background-color: #4caf50; /* Example primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px; /* Space above the button */
+  transition: background-color 0.3s ease;
+}
+
+.GPT-3-5-button{
+  width: 500px;
+  height: 50px;
+  padding: 2px;
+  background-color: #4caf50; /* Example primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px; /* Space above the button */
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.GPT-4-button{
+  width: 500px;
+  height: 50px;
+  padding: 2px;
+  background-color: #4caf50; /* Example primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px; /* Space above the button */
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button{
+  width: 200px;
+  height: 50px;
+  padding: 2px;
+  background-color: #4caf50; /* Example primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px; /* Space above the button */
+  transition: background-color 0.3s ease;
+}
+
+.button-selected {
+  background-color: #f44336; /* Green background for selected */
+  /* other styles for selected state */
+}
+
+.button-unselected {
+  background-color: #4caf50; /* Red background for unselected */
+  /* other styles for unselected state */
 }

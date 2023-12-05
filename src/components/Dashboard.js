@@ -72,13 +72,13 @@ function Dashboard() {
             <img src={`{/avatar/${user.avatar}}`} alt={`Avatar of ${user.name}`} className="user-avatar" />
           )}
           <div>
-           <h2 style={{ textAlign: 'left', display: 'block' }}>Username: {user.username}</h2>
-           <h2 style={{ textAlign: 'left', display: 'block' }}>MBTI: {user.mbti}-{user.mbti_variant}</h2>
+           <h1 style={{ textAlign: 'left', display: 'block' }} className = "username-dash">{user.username}</h1>
+           <h2 style={{ textAlign: 'left', display: 'block' }} className = "mbti-dash">MBTI: {user.mbti}-{user.mbti_variant}</h2>
           </div>
         </section>
 
         <section className="virtual-friends-section">
-            <h3>Your Virtual Friends</h3>
+            <h1>Your Virtual Friends</h1>
             <div className="friends-list">
                 {/* {friends.map((friend, index) => (
                     <div key={index} className="friend"> 
@@ -100,9 +100,9 @@ function Dashboard() {
                         onClick={() => handleAvatarClick(friend)}
                       />
                     )}
-                    <h4>{friend.name}</h4>
+                    <h2>{friend.name}</h2>
                     <h4>MBTI: {friend.mbti}-{friend.mbti_variant.charAt(0)}</h4>
-                    <div className="custom_prompt">Custom Prompt: {friend.custom_prompt}</div>
+                    <div className="custom_prompt">{friend.custom_prompt}</div>
                   </div>
                 ))}
             </div>

@@ -13,7 +13,7 @@ function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { selectedType, selectedTrait, virtualFriendName, customPrompt, avatarUrl} = location.state || {};
-  const [selectedModel, setSelectedModel] = useState('gpt-4');
+  const [selectedModel, setSelectedModel] = useState('');
   const [showModelSelection, setShowModelSelection] = useState(true);
   const navigate = useNavigate();
   const username = localStorage.getItem('username');
@@ -91,15 +91,28 @@ function Chatbot() {
       {showModelSelection && (
         <div>
           <div className="model-selection">
-            <button onClick={() => setSelectedModel('gpt-3.5')}>Use GPT-3.5</button>
-            <button onClick={() => setSelectedModel('gpt-4')}>Use GPT-4</button>
+            <h2>Choose Your Desired Model First</h2>
+            {/* <button onClick={() => setSelectedModel('gpt-3.5')} className = "GPT-3-5-button">Use Fine-tuned GPT-3.5</button>
+            <button onClick={() => setSelectedModel('gpt-4')}  className = "GPT-4-button">Use GPT-4</button> */}
+            <button
+              onClick={() => setSelectedModel('gpt-3.5')}
+              className={`GPT-3-5-button ${selectedModel === 'gpt-3.5' ? 'button-selected' : 'button-unselected'}`}
+            >
+            Use Fine-tuned GPT-3.5
+            </button>
+            <button
+              onClick={() => setSelectedModel('gpt-4')}
+              className={`GPT-4-button ${selectedModel === 'gpt-4' ? 'button-selected' : 'button-unselected'}`}
+            >
+            Use GPT-4
+            </button>
           </div>
-          <button onClick={handleConfirm}>Confirm</button>
+          <button onClick={handleConfirm} className = "confirm-button">Confirm</button>
         </div>
       )}
-      <div className="back-to-dash">
+      <div className="back-to-dash-chatbot">
             <button 
-              className={"dash-button"}
+              className={"dash-button-chatbot"}
               onClick={() => backtoDash()}
             >
               Go Back to Dashboard
